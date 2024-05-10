@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        .category {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Categories</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'electronics'%}">
+                        <img src="{% static 'StoreApp/images/q1.jpg'%}" alt="Electronics">
+                    </a>
+                    <p>Electronics</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'fashion'%}">
+                        <img src="{% static 'StoreApp/images/q5.jpg'%}" alt="Fashion">
+                    </a>
+                    <p>Fashion</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'homeanddecorations'%}">
+                        <img src="{% static 'StoreApp/images/q2.jpg'%}" alt="Home & Garden">
+                    </a>
+                    <p>Home & Garden</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'toyandgames'%}">
+                        <img src="{% static 'StoreApp/images/q3.jpg'%}" alt="Toys & Games">
+                    </a>
+                    <p>Toys & Games</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'sportsandfitness'%}">
+                        <img src="{% static 'StoreApp/images/q4.jpg'%}" alt="Sports & Fitness">
+                    </a>
+                    <p>Sports & Fitness</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category">
+                    <a href="{% url 'skincare'%}">
+                        <img src="{% static 'StoreApp/images/qn.jpg'%}" alt="Skincare and Cosmetics">
+                    </a>
+                    <p>Skincare and Cosmetics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
