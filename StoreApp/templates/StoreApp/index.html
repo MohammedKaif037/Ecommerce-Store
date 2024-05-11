@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +12,10 @@
       color: #000000;
     }
 
-  .equal-height .card {
-    display: flex;
-    flex-direction: column;
-  }
+    .equal-height .card {
+      display: flex;
+      flex-direction: column;
+    }
 
     .navbar {
       background-color: #ffffff;
@@ -93,7 +92,7 @@
       <div class="col-md-12 text-center">
         <h1 class="display-4">Welcome to BW Store</h1>
         <p class="lead">The best black and white themed e-commerce store</p>
-        <a href="{% url 'categories'%}" class="btn btn-outline-light">Explore Now</a>
+        <a href="{% url 'categories' %}" class="btn btn-outline-light">Explore Now</a>
       </div>
     </div>
   </div>
@@ -109,16 +108,14 @@
             <h5 class="card-title">{{ product.title }}</h5>
             <p class="card-text flex-grow-1">{{ product.description }}</p>
             <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-            <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+            <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-  
-
-{% if electronics_products %}
+  {% if electronics_products %}
 <h2  style="color: green;text-align: center;">Electronics  Availability </h2>
 
 <div class="container">
@@ -131,7 +128,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -152,7 +149,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -173,7 +170,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -194,7 +191,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -215,7 +212,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -237,7 +234,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text flex-grow-1">{{ product.description }}</p>
         <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-        <a href="{% url 'checkout' %}?title={{ product.title }}&price={{ product.price }}" class="btn btn-outline-light mt-auto">Buy Now</a>
+        <a href="{% url 'before_checkout' %}?title={{ product.title }}&price={{ product.price }}&id={{ product.id }}" class="btn btn-outline-light mt-auto">Buy Now</a>
       </div>
     </div>
   </div>
@@ -245,6 +242,7 @@
 </div>
 </div>
 {% endif %}
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -254,6 +252,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Generate a random ID
+      var randomId = Math.random().toString(36).substring(7);
+
+      // Add the random ID to the "Buy Now" button links
+      var buyNowButtons = document.querySelectorAll('.btn.btn-outline-light');
+      buyNowButtons.forEach(function (button) {
+        var href = button.getAttribute('href');
+        button.setAttribute('href', href + '&id=' + randomId);
+      });
+    });
+  </script>
 </body>
 
 </html>

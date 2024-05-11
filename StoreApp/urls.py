@@ -16,5 +16,6 @@ urlpatterns = [
     path('checkout/',views.checkout_function,name='checkout'),
     path('contact/storeuserdata',views.storeuserdata_function,name='contactsuccess'),
     path('success/', views.success_page_function, name='success'),
+    path('before_checkout/',views.before_checkout_function,name='before_checkout')
     # path('invoice/',views.invoice_function,name='invoice_function'),
 ]

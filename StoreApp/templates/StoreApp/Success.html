@@ -44,6 +44,8 @@
     <div class="invoice-container">
         <div class="invoice-header">
             <h2>Invoice</h2>
+            <h3>BW Store</h3>
+            <p>Near Axile Industries,123 Main Street, Anytown, State, 12345, Country</p>
         </div>
         <div class="invoice-details">
             <h3>Bill To:</h3>
@@ -57,16 +59,29 @@
             <b>CVV: </b>{{ payment_info.cvv }}<br>
             <b>Billing Address: </b>{{ payment_info.billing_address }}</p>
         </div>
+        <div class="invoice-details">
+            <h3>Delivery <Details></Details>:</h3>
+            <p><b>Delivery Date: </b>{{ days_to_deliver|date:"Y-m-d" }}<br>
+            <b>Delivery Time: </b>{{  delivery_time_12hr }}<br>
+        </div>
+        
         <table>
             <thead>
                 <tr>
                     <th>Ordered Item</th>
+                    <th>Price</th>
+                    <th>Additonal Charges + ( {{additional_charges}} )</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ shipping_details.ordered_item }}</td>
+                    <td>{{ title }}</td>
+                    <td>{{ price }} USD </td>
+                    <td>{{additional_charges}}</td>
+                    <td>{{ total_price }} USD</td>
                 </tr>
+                
             </tbody>
         </table>
     </div>

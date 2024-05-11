@@ -3,9 +3,10 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.views.decorators.csrf import csrf_exempt
 from StoreApp.forms import UserForm
-from StoreApp.models import Category, products
+from StoreApp.models import Category, OrderInformation, products
 from .forms import ShippingInformationForm, PaymentInformationForm
 from xhtml2pdf import pisa
+from datetime import datetime,timedelta
 # Create your views here.
 
 def index_function(request):
@@ -134,15 +135,32 @@ def storeuserdata_function(request):
 #         return HttpResponse("Method Not Allowed")
 @csrf_exempt
 def checkout_function(request):
-    print('Checkout function called')
-    title = request.GET.get('title', None)
-    price = request.GET.get('price', None)
-    print('title: %s, price: %s' % (title, price))
-
+    title=''
+    price=''
     if request.method == 'POST':
+        id=request.POST.get('user_id')
+        additional_charges=int(request.POST.get('shipping_method'))
+        if additional_charges == 0:
+            days = 7
+        elif additional_charges == 10:
+            days = 2
+        else:
+            days = 3
+        today=datetime.today()
+        days_to_deliver = today + timedelta(days=days)
+        # Assuming you want the delivery time to be 12:00 PM (noon)
+        delivery_time = datetime(today.year, today.month, today.day, 12, 0, 0)  # noon
+
+        # Convert delivery time to 12-hour format with AM/PM
+        delivery_time_12hr = delivery_time.strftime("%I:%M:%S %p")
         print('POST request received')
+        title=OrderInformation.objects.get(USER_Identification=id).title
+        price=OrderInformation.objects.get(USER_Identification=id).price
+        total_price=int(additional_charges)+int(price)
+        print('Now  ->dispalying the order title and price',title,price)
         shipping_form = ShippingInformationForm(request.POST)
         payment_form = PaymentInformationForm(request.POST)
+
         print(shipping_form, payment_form)
 
         if shipping_form.is_valid() and payment_form.is_valid():
@@ -155,6 +173,10 @@ def checkout_function(request):
             template_path = 'StoreApp/Success.html'
             context = {'title': title,
                        'price': price,
+                       'additional_charges': additional_charges,
+                       'days_to_deliver':days_to_deliver,
+                       'delivery_time_12hr': delivery_time_12hr,
+                       'total_price': total_price,
                        'shipping_details': {
                            'full_name': shipping_info.full_name,
                            'address': shipping_info.address,
@@ -185,5 +207,21 @@ def checkout_function(request):
         payment_form = PaymentInformationForm()
 
     return render(request, 'StoreApp/checkout.html', {'shipping_form': shipping_form, 'payment_form': payment_form, 'title': title, 'price': price})
+    path('before_checkout/',views.before_checkout_function,name=before_checkout)
+def before_checkout_function(request):
+    print('Checkout function called')
+    shipping_form = ShippingInformationForm()
+    payment_form = PaymentInformationForm()
+    
+    title = request.GET.get('title', None)
+    price = request.GET.get('price', None)
+    id = request.GET.get('id', None)
+     # Check if title is provided
+    if title is not None:
+        
+        order = OrderInformation(title=title, price=price, USER_Identification=id)
+        order.save()
+        print('title: %s, price: %s' % (title, price))
+    return render(request, 'StoreApp/checkout.html', {'title': title, 'price':price,'id':id,'shipping_form': shipping_form, 'payment_form': payment_form})
 def success_page_function(request):
     return render(request, 'StoreApp/Success.html')

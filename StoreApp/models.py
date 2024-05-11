@@ -42,4 +42,6 @@ class PaymentInformation(models.Model):
 
 class OrderInformation(models.Model):
     title=models.CharField(max_length=255)
+    price=models.DecimalField(max_digits=10, decimal_places=2)
+    USER_Identification=models.CharField(max_length=120,default=None)
 
