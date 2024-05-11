@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-container {
+            width: 80%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .invoice-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <h2>Invoice</h2>
+        </div>
+        <div class="invoice-details">
+            <h3>Bill To:</h3>
+            <p><b>Full Name: </b>{{ shipping_details.full_name }}<br>
+            <b>Address: </b>{{ shipping_details.address }}<br>
+            <b>City: </b>{{ shipping_details.city }} <br><b>State: </b>{{ shipping_details.state_province }}<br>
+            <b>Postal Code: </b>{{ shipping_details.postal_code }} <br> <b>Country: </b>{{ shipping_details.country }}</p>
+            <h3>Payment Details:</h3>
+            <p><b>Card Number: </b>{{ payment_info.card_number }}<br>
+            <b>Expiration Date: </b>{{ payment_info.expiration_date }}<br>
+            <b>CVV: </b>{{ payment_info.cvv }}<br>
+            <b>Billing Address: </b>{{ payment_info.billing_address }}</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ordered Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ shipping_details.ordered_item }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+ 

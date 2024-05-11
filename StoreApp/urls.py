@@ -13,4 +13,8 @@ urlpatterns = [
     path('toyandgames/',views.toys_and_games_function,name='toyandgames'),
     path('sportsandfitness/',views.sports_and_fitness_function,name='sportsandfitness'),
     path('skincare/',views.skincare_function,name='skincare'),
+    path('checkout/',views.checkout_function,name='checkout'),
+    path('contact/storeuserdata',views.storeuserdata_function,name='contactsuccess'),
+    path('success/', views.success_page_function, name='success'),
+    # path('invoice/',views.invoice_function,name='invoice_function'),
 ]

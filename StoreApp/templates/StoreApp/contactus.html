@@ -15,21 +15,24 @@
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Contact Us</h1>
-        <form>
+        {% if not user_data %}
+        <form action="storeuserdata" method="post">
+            {% csrf_token %}
+            {% for field in form %}
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
-            </div>
+                {{field.label_tag}}
+                 {{field}}
+             </div>
+             {% endfor %}
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+       
     </div>
+    {% endif %}
+    {% if user_data %}
+    <h2 style="color: green;text-align: center;">Success</h2>
+    <h3 style="color: blue;text-align: center;">Your Name:{{user_data.name}}</h3>
+    <h3 style="color: blue;text-align: center;">Your Email:{{user_data.email}}</h3>
+    {% endif %}
 </body>
 </html>
