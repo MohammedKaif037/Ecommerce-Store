@@ -154,8 +154,8 @@ def checkout_function(request):
         # Convert delivery time to 12-hour format with AM/PM
         delivery_time_12hr = delivery_time.strftime("%I:%M:%S %p")
         print('POST request received')
-        title=OrderInformation.objects.get(USER_Identification=id).title
-        price=OrderInformation.objects.get(USER_Identification=id).price
+        title=OrderInformation.objects.filter(USER_Identification=id)[0].title
+        price=OrderInformation.objects.filter(USER_Identification=id)[0].price
         total_price=int(additional_charges)+int(price)
         print('Now  ->dispalying the order title and price',title,price)
         shipping_form = ShippingInformationForm(request.POST)
