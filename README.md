@@ -45,14 +45,15 @@ Upon successful completion of the checkout process, users will be directed to a 
 Please read [CONTRIBUTING.md](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Screenshots
-![Screenshot 1]([screenshot1.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HOME.png))
-![Screenshot 2]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Categories.png))
-![Screenshot 3]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/AboutUs.png))
-![Screenshot 4]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Contact.png))
-![Screenshot 5]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HomeandDecoration.png))
-![Screenshot 6]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout.png))
-![Screenshot 7]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout1.png))
-![Screenshot 8]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/INVOICE.png))
+![Screenshot 1](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HOME.png)
+![Screenshot 2](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Categories.png)
+![Screenshot 3](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/AboutUs.png)
+![Screenshot 4](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Contact.png)
+![Screenshot 5](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HomeandDecoration.png)
+![Screenshot 6](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout.png)
+![Screenshot 7](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout1.png)
+![Screenshot 8](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/INVOICE.png)
+
 
 ## Support
 For any questions or issues, please [open an issue](link-to-issue-tracker) here on GitHub.
