@@ -3,12 +3,15 @@
 ## Title and Description
 Welcome to BW Store, the best black and white themed e-commerce store. Explore our diverse range of products and enjoy a seamless shopping experience.
 ## Authors
-- [Your Name](link-to-profile)
-- [Co-author's Name (if any)](link-to-profile)
+- [Your Name]([link-to-profile](https://github.com/MohammedKaif037))
 
 ## Badges
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/Python-3.8-blue)](https://www.python.org/downloads/release/python-380/)
+[![Bootstrap Version](https://img.shields.io/badge/Bootstrap-5.3-purple)](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+[![HTML Version](https://img.shields.io/badge/HTML-5-orange)](https://www.w3.org/TR/html52/)
+[![Django Version](https://img.shields.io/badge/Django-3.2-green)](https://docs.djangoproject.com/en/3.2/)
+
 
 
 ## Features
@@ -39,11 +42,17 @@ Upon successful completion of the checkout process, users will be directed to a 
 - Button Text: #333333
 
 ## Contributing
-Please read [CONTRIBUTING.md](link-to-contributing-guide) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Screenshots
-![Screenshot 1](screenshot1.png)
-![Screenshot 2](screenshot2.png)
+![Screenshot 1]([screenshot1.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HOME.png))
+![Screenshot 2]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Categories.png))
+![Screenshot 3]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/AboutUs.png))
+![Screenshot 4]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Contact.png))
+![Screenshot 5]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/HomeandDecoration.png))
+![Screenshot 6]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout.png))
+![Screenshot 7]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout1.png))
+![Screenshot 8]([screenshot2.png](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/INVOICE.png))
 
 ## Support
 For any questions or issues, please [open an issue](link-to-issue-tracker) here on GitHub.
@@ -63,6 +72,5 @@ For any questions or issues, please [open an issue](link-to-issue-tracker) here 
 Mention any notable organizations or projects that use this project.
 
 ## Acknowledgements
-- Special thanks to [name] for their contribution to [specific feature].
-- This project was inspired by [source].
+- This project was inspired by Apple Store.
 
