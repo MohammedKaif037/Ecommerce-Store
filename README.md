@@ -64,10 +64,7 @@ Please read [CONTRIBUTING.md](https://github.com/MohammedKaif037/Ecommerce-Store
 ### Screenshot 6 - Checkout
 ![Screenshot 6](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout.png)
 
-### Screenshot 7 - Checkout 1
-![Screenshot 7](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/Checkout1.png)
-
-### Screenshot 8 - INVOICE
+### Screenshot 7 - INVOICE
 ![Screenshot 8](https://github.com/MohammedKaif037/Ecommerce-Store/blob/main/Screenshots/invoice_page-0001.jpg)
 
 
