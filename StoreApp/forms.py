@@ -4,8 +4,13 @@ from StoreApp.models import User
 
 class UserForm(forms.ModelForm):
     class Meta:
-        model=User
-        fields='__all__'
+        model = User
+        fields = ['name', 'email', 'message']
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control mb-2', 'placeholder': 'Name'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control mb-2', 'placeholder': 'Email'}),
+            'message': forms.TextInput(attrs={'class': 'form-control mb-2', 'placeholder': 'Message'}),
+        }
 
 from django import forms
 from .models import ShippingInformation, PaymentInformation
