@@ -18,7 +18,6 @@ Welcome to BW Store, the best black and white themed e-commerce store. Explore o
 - Responsive design for seamless browsing on various devices.
 - Categorized product listings for easy navigation.
 - Product details page with images, descriptions, and prices.
-- Add items to the cart for convenient shopping.
 - Checkout process with shipping and payment information.
 - Option for standard, expedited, or express shipping methods.
 - Agree to terms and conditions checkbox before placing an order.
