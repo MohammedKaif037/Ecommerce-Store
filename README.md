@@ -3,7 +3,7 @@
 ## Title and Description
 Welcome to BW Store, the best black and white themed e-commerce store. Explore our diverse range of products and enjoy a seamless shopping experience.
 ## Authors
-- [Your Name]([link-to-profile](https://github.com/MohammedKaif037))
+- [Mohammed Kaif]([link-to-profile](https://github.com/MohammedKaif037))
 
 ## Badges
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
